@@ -18,8 +18,6 @@ admin.autodiscover()
 
 
 urlpatterns = patterns('',
-    # gcal API test
-    (r'^gcal', gcal_index),
 
     # admin site
     (r'^admin/', 'csesoc.auth.backends.admin_wrapper'),

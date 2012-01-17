@@ -1,0 +1,10 @@
+{% extends "1-column.html" %}
+{% block middlecontent %}
+
+<h1>Calendar events</h1>
+{% for event in csesoc_events %}
+<h2>{{event.summary}}</h2>
+{{event.description}}
+{% endfor %}
+
+{% endblock %}

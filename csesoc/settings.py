@@ -82,6 +82,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.media',
     'django.core.context_processors.static',
     'csesoc.context_processors.sponsors_list',
+    'csesoc.context_processors.csesoc_events',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -171,5 +172,14 @@ CACHES = {
 }
 
 # google-api settings
+# FIXME: For now we are only doing read-only on a public calendar. Need to
+# implement OAuth2 with hardcoded credentials if we want to add support
+# for editing events/etc. Unfortunately all the sample code given in the
+# Google API is for getting credentials from our users, rather than using
+# a hardcoded one, so I haven't been bothered to figure it out yet.
 CSE_STUDENT_CALENDAR_ID = 'tq9e3mqs87en7plntqjnirossg@group.calendar.google.com'
 GCAPI_KEY = 'AIzaSyB1vqsdBa7948fVNwWVC-WZNvRBiT7mlsA'
+# This is the Google Calendar email of the events we consider to be CSESoc.
+# All other events are either Revue or CSE's. Consider adding support for
+# seeing events by other creators.
+CSESOC_EVENTS_CREATOR = 'tq9e3mqs87en7plntqjnirossg@group.calendar.google.com' # FIXME: We're looking at Brad as the creator temporarily until we have our own creator set up.
