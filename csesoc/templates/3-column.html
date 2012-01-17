@@ -1,14 +1,15 @@
 {% extends "main.html" %}
+<!-- This is now 2-column rather than 3-column. -->
 {% block allcontent %}
-        <div class="content grid_3" id="leftcontent"> 
+        <div class="content grid_9" id="leftcontent"> 
             {% block leftcontent %}{% endblock %}
-        </div>
-
-        <div class="content grid_6" id="middlecontent">
-            {% block middlecontent %}{% endblock %}
+            <div class='content grid_9' id='middlecontent'>
+                {% block middlecontent %}{% endblock %}
+            </div>
         </div>
 
         <div class="content grid_3" id="rightcontent">
             {% block rightcontent %}{% endblock %}
         </div>
+
 {% endblock %}
