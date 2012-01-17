@@ -169,3 +169,7 @@ CACHES = {
         'LOCATION': '127.0.0.1:11211',
     }
 }
+
+# google-api settings
+CSE_STUDENT_CALENDAR_ID = 'tq9e3mqs87en7plntqjnirossg@group.calendar.google.com'
+GCAPI_KEY = 'AIzaSyB1vqsdBa7948fVNwWVC-WZNvRBiT7mlsA'

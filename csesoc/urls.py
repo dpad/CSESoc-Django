@@ -12,11 +12,14 @@ from csesoc.scheduler.views import join, results
 from csesoc.sponsors.views import sponsors
 from csesoc.music.views import music_submit_song, music_vote
 from csesoc.invoices.views import invoice_detail, invoice_thanks
+from csesoc.gcal.views import gcal_index
 
 admin.autodiscover()
 
 
 urlpatterns = patterns('',
+    # gcal API test
+    (r'^gcal', gcal_index),
 
     # admin site
     (r'^admin/', 'csesoc.auth.backends.admin_wrapper'),

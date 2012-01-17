@@ -5,7 +5,6 @@ from django.shortcuts import get_object_or_404, render_to_response
 from django.template import RequestContext
 from django.views.generic.list_detail import object_list
 
-from django.conf import settings
 from csesoc.mainsite.models import Static
 from csesoc.sponsors.views import sponsorsList
 
